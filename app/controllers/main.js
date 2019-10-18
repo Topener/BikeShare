@@ -1,6 +1,10 @@
 
 function handleOpen() {
-    if (OS_IOS) return;
+
+    if (OS_IOS) {
+        $.content.render();
+        return;
+    };
 
     // Code below is for Android to display a menu icon
     const activity = $.win.activity;

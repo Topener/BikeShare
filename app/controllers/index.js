@@ -5,4 +5,6 @@
  * here to choose which controller we want to open first. 
  */
 
+//require('/image').getDefaultImageIcon();
+
 Alloy.createController('main').getView().open();

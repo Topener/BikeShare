@@ -9,6 +9,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "ti.detect": "^1.0.2",
     "ti.xhr": "^3.0.2"
   }
 }

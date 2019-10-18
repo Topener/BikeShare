@@ -1,0 +1,28 @@
+"#wrapper": {
+    height: 200,
+    left: 20,
+    right: 20,
+    borderRadius: 10,
+    backgroundColor: "#fff"
+}
+
+"#wrapper[if=Alloy.CFG.TiDetect.hasNotch]": {
+    bottom: -200
+}
+
+"#wrapper[if=!Alloy.CFG.TiDetect.hasNotch]": {
+    bottom: -240
+}
+
+"#title": {
+    left: 20,
+    right: 20,
+    top: 20,
+    height: 20,
+    font: {
+        fontSize: 16,
+        fontWeight: 'bold'
+    },
+    minimumFontSize: 12,
+    color: "#333"
+}

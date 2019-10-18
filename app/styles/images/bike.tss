@@ -1,0 +1,41 @@
+"#wrapper": {
+    height: 50,
+    width: 50
+}
+
+"#mapIcon": {
+    height: 50,
+    width: 50,
+    backgroundColor: "#fff",
+    borderRadius: 25
+}
+
+"#bikeIcon": {
+    text: "", // https://fontawesome.com/icons/biking?style=light
+    font: {
+        fontFamily: Alloy.CFG.fonts.fa_light,
+        fontSize: 30
+    },
+    color: "#297A6E",
+    top: 8,
+    zIndex: 5
+}
+
+"#numberIndicator": {
+    bottom: 0,
+    right: 0,
+    width: 16,
+    height: 16,
+    borderRadius: 8,
+    backgroundColor: "#A7271B",
+    zIndex: 10
+}
+
+"#number": {
+    color: "#fff",
+    font: {
+        fontSize: 12,
+        fontWeight: 'bold'
+    },
+    text: $.args.number
+}

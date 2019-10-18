@@ -1,7 +1,8 @@
 {
 	"global": {
 		"fonts": {
-			"fa-solid": "FontAwesome5Free-Solid"
+			"fa_solid": "FontAwesome5Free-Solid",
+			"fa_light": "FontAwesome5Pro-Light"
 		}
 	},
 	"env:development": {},

@@ -10,3 +10,8 @@
         fontSize: 20
     }
 }
+
+"#menuContent": {
+    layout: 'vertical'	
+}
+

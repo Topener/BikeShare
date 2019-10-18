@@ -1,3 +1,4 @@
 <Alloy>
-	<Module module="ti.map" method="createView" id="map" onRegionchanged="handleRegionChange" />
+	<Module module="ti.map" method="createView" id="map" onRegionchanged="handleRegionChange" onClick="clickMap" />
+	<Require src="/elements/mapOverlay" id="overlay" />
 </Alloy>

@@ -1,0 +1,10 @@
+<Alloy>
+	<View id="wrapper">
+		<View id="numberIndicator">
+			<Label id="number" />
+		</View>
+		<View id="mapIcon">
+			<Label id="bikeIcon" />
+		</View>
+	</View>
+</Alloy>

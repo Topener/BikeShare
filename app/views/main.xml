@@ -19,7 +19,7 @@
 			</DrawerLayout>
 
 			<!-- On iOS we add the content straight to the window -->
-			<Require src="/content" platform="ios" />
+			<Require src="/content" platform="ios" id="content" />
 
 		</Window>
 	</NavigationWindow>

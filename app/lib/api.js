@@ -14,6 +14,10 @@ function getBikes(region, callback) {
     filterBikes(region, callback);
 }
 
+function getPlace(uid) {
+    return _.findWhere(places, {uid: uid});
+}
+
 function filterBikes(region, callback) {
     const maxLat = region.latitude + region.latitudeDelta;
     const maxLng = region.longitude + region.longitudeDelta;
@@ -39,5 +43,6 @@ function getBikesFromAPI(callback) {
 }
 
 module.exports = {
-    getBikes: getBikes
+    getBikes: getBikes,
+    getPlace: getPlace
 }
