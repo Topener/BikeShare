@@ -1,7 +1,7 @@
-"#content": {
-    backgroundColor: "#fff"
-}
-
-"Label": {
-    color: "#333"	
+"#map": {
+    region: {
+        latitude: 52.5174,
+        longitude: 13.4055,
+        latitudeDelta: 0.05
+    }
 }

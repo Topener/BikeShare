@@ -1,5 +1,3 @@
 <Alloy>
-	<View>
-		<Label>Hello, World!</Label>
-	</View>
+	<Module module="ti.map" method="createView" id="map" onRegionchanged="handleRegionChange" />
 </Alloy>

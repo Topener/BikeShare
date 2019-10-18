@@ -1,5 +1,9 @@
 {
-	"global": {},
+	"global": {
+		"fonts": {
+			"fa-solid": "FontAwesome5Free-Solid"
+		}
+	},
 	"env:development": {},
 	"env:test": {},
 	"env:production": {},
