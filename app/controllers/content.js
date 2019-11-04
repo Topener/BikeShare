@@ -58,25 +58,17 @@ function clickMap(e) {
 
     if (lastAnnotation && lastAnnotation.uid && e.annotation.uid == lastAnnotation.uid){
         deselectTimeout = setTimeout($.overlay.dismiss, 50);
-        toggleSelection({selected: false, place: place, annotation: e.annotation})
         lastAnnotation = false;
         return;
     }
     clearTimeout(deselectTimeout);
     lastAnnotation = e.annotation;
-    toggleSelection({selected: true, place: place, annotation: e.annotation})
     $.overlay.show();
     $.overlay.render(place);
 }
 
 function toggleSelection(options){
-    const selectedAnnotation = _.findWhere(annotations, {uid: options.annotation.uid});
-    $.map.removeAnnotation(selectedAnnotation);
-    annotations.splice(annotations.indexOf(selectedAnnotation), 1);
-    const newAnnotation = createAnnotation({place: options.place, selected: options.selected});
-    annotations.push(newAnnotation);
-    $.map.addAnnotation(createAnnotation({place: options.place, selected: options.selected}));
-    
+  
 }
 
 exports.render = function() {
