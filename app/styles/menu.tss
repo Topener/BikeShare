@@ -19,3 +19,13 @@
     image: "/images/logo.png",
     bottom: 15
 }
+
+"#wallet": {
+    icon: "",
+    title: "Wallet"
+}
+
+"#ride_history": {
+    icon: "",
+    title: "Ride History"
+}

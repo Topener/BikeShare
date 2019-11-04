@@ -1,0 +1,7 @@
+<Alloy>
+	<View id="wrapper">
+		<Label id="menuIcon" text="$.args.icon" />
+		<Label id="menuLabel" text="$.args.title" />
+	</View>
+
+</Alloy>

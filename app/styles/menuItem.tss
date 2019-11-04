@@ -1,0 +1,20 @@
+"#wrapper": {
+    height: 70	
+}
+
+"#menuIcon": {
+    font: {
+        fontFamily: Alloy.CFG.fonts.fa_light,
+        fontSize: 30
+    },
+    color: "#888888",
+    left: 20
+}
+
+"#menuLabel": {
+    font: {
+        fontSize: 18
+    },
+    left: 90,
+    color: "#555555"
+}

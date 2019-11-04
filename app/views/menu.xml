@@ -4,6 +4,8 @@
 			<ImageView id="logo" />
 		</View>
 		<View id="menuContent">
-		</View>
+				<Require src="/menuItem" id="wallet" />
+				<Require src="/menuItem" id="ride_history" />
+			</View>
 	</View>
 </Alloy>
