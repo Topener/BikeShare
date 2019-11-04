@@ -4,13 +4,31 @@ xhr.setStaticOptions({
 });
 
 let places = [];
+let lastFetch = 0;
+let isFetching = false;
+const pendingCallbacks = [];
 
 function getBikes(region, callback) {
-    if (places.length === 0) {
+    if (places.length === 0 || Date.now() - lastFetch > 60000) {
+        lastFetch = Date.now();
+        isFetching = true;
         return getBikesFromAPI(() => {
+            isFetching = false;
+            _.each(pendingCallbacks, pc => {
+                filterBikes(pc.region, pc.callback);
+            });
+
             filterBikes(region, callback);
         });
+
     }
+    if (isFetching) {
+        return pendingCallbacks.push({
+            region: region,
+            callback: callback
+        });
+    }
+    
     filterBikes(region, callback);
 }
 
