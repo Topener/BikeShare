@@ -4,8 +4,23 @@
 			<ImageView id="logo" />
 		</View>
 		<View id="menuContent">
-				<Require src="/menuItem" id="wallet" />
-				<Require src="/menuItem" id="ride_history" />
+			<Label id="greeting" />
+			<View id="summary">
+				<View id="distance">
+					<Label class="fa_icon" id="distanceIcon" />
+					<Label class="summaryLabel" id="distanceLabel" />
+					<Label class="summaryDescriptor" id="distanceDescriptor" />
+				</View>
+
+				<View id="rides">
+					<Label class="fa_icon" id="ridesIcon" />
+					<Label class="summaryLabel" id="ridesLabel" />
+					<Label class="summaryDescriptor" id="ridesDescriptor" />
+				</View>
+
 			</View>
+			<Require src="/menuItem" id="wallet" />
+			<Require src="/menuItem" id="ride_history" />
+		</View>
 	</View>
 </Alloy>

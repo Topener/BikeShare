@@ -3,7 +3,7 @@
 		<Window onOpen="handleOpen" id="win">
 
 			<LeftNavButton platform="ios">
-				<Button title="Menu" onClick="showMenu" />
+				<Label id="menu" onClick="showMenu" />
 			</LeftNavButton>
 
 			<!-- DrawerLayout is Android only. We have a custom menu using the 

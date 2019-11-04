@@ -46,7 +46,7 @@ function handleSafearea() {
     // is full height, we need to monitor the safeArea using the postlayout event
     // and then apply the content limit
     $.menu.getView('menuContent').applyProperties({
-        top: $.win.safeAreaPadding.top,
+        //top: $.win.safeAreaPadding.top,
         bottom: $.win.safeAreaPadding.bottom
     });
     $.menu.getView('header').height = $.menu.getView('header').height + $.win.safeAreaPadding.top;

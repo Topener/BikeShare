@@ -29,3 +29,64 @@
     icon: "",
     title: "Ride History"
 }
+
+".fa_icon": {
+    font: {
+        fontFamily: Alloy.CFG.fonts.fa_light,
+        fontSize: 30
+    }	
+}
+
+"#summary": {
+    height: 80
+}
+
+"#distance": {
+    width: 100,
+    left: 20,
+    layout: 'vertical'
+}
+
+"#distanceIcon": {
+    text: "",
+    color: "#256B6F",
+    top: 0
+}
+
+".summaryLabel": {
+    color: "#666",
+    top: 3,
+    font: {
+        fontSize: 16
+    }	    	
+}
+
+".summaryDescriptor": {
+    color: "#aaa",
+    top: 0,
+    font: {
+        fontSize: 14
+    }	
+}
+
+"#rides": {
+    width: 100,
+    right: 20,
+    layout: 'vertical'
+}
+
+"#ridesIcon": {
+    text: "",
+    color: "#A19136"
+}
+
+"#greeting": {
+    font: {
+        fontSize: 24
+    },
+    text: "Hello",
+    color: "#666666",
+    top: 20,
+    bottom: 20,
+    height: 30
+}

@@ -1,4 +1,7 @@
-
-".container" : {
-  
+"#menu": {
+    text: "",
+    font: {
+        fontFamily: Alloy.CFG.fonts.fa_light,
+        fontSize: 30
+    }
 }
