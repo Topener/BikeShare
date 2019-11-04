@@ -1,8 +1,9 @@
 <Alloy>
 	<View id="wrapper">
+		<View id="header">
+			<ImageView id="logo" />
+		</View>
 		<View id="menuContent">
-			<Label id="title">Menu</Label>
-
 		</View>
 	</View>
 </Alloy>

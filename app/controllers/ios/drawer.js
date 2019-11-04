@@ -49,4 +49,5 @@ function handleSafearea() {
         top: $.win.safeAreaPadding.top,
         bottom: $.win.safeAreaPadding.bottom
     });
+    $.menu.getView('header').height = $.menu.getView('header').height + $.win.safeAreaPadding.top;
 }

@@ -1,17 +1,20 @@
 "#wrapper": {
-    backgroundColor: "#fff",
+    backgroundColor: "#ffffff",
     layout: 'vertical'
 }
 
-"#title": {
-    color: "#333",
-    top: 20,
-    font: {
-        fontSize: 20
-    }
+"#header": {
+    top: 0,
+    height: 50,
+    backgroundColor: "#03608a"
 }
 
 "#menuContent": {
-    layout: 'vertical'	
+    layout: 'vertical',
+    backgroundColor: "#ffffff"
 }
 
+"#logo": {
+    image: "/images/logo.png",
+    bottom: 15
+}
