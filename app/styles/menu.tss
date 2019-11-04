@@ -15,6 +15,7 @@
 }
 
 "#logo": {
+    // LOGO FROM https://www.deezernextbike.de/de/berlin/
     image: "/images/logo.png",
     bottom: 15
 }
