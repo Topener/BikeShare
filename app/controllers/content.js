@@ -4,7 +4,7 @@ let placeUIDs = [];
 
 function handleRegionChange(e) {
     require('/api').getBikes(e.source.region, bikes => {
-        console.log(`Found ${bikes.length} places for bikes`);
+        //console.log(`Found ${bikes.length} places for bikes`);
         renderAnnotations(bikes);
     });
 }
@@ -20,6 +20,11 @@ function renderAnnotations(places) {
     let oldAnnotations = _.filter(annotations, annotation => {
         if (placesUIDs.indexOf(annotation.uid) == -1) {
             placeUIDs.splice(placesUIDs.indexOf(annotation.uid),1);
+            if (lastAnnotation && lastAnnotation.uid == annotation.uid) {
+                clickMap({
+                    annotation: annotation
+                });
+            }
             return true;
         }
         return false;
@@ -29,10 +34,15 @@ function renderAnnotations(places) {
         newAnnotations.push(createAnnotation({place: place, selected: false}));
         placeUIDs.push(place.uid);
     });
-
     $.map.addAnnotations(newAnnotations);
     $.map.removeAnnotations(oldAnnotations);
-    annotations = newAnnotations;
+
+    _.each(oldAnnotations, oa => {
+        annotations.splice(_.findIndex(annotations, {uid: oa.uid}), 1);
+    });
+    _.each(newAnnotations, na => {
+        annotations.push(na);
+    });
 }
 
 function createAnnotation(options) {
@@ -40,21 +50,34 @@ function createAnnotation(options) {
         latitude: options.place.lat,
         longitude: options.place.lng,
         image: require('/image').getBikeImage(options),
-        uid: options.place.uid
+        uid: options.place.uid,
+        selectedIcon: options.selected,
+        place: options.place
     })
 }
 
 let lastAnnotation = false;
 let deselectTimeout = false;
 function clickMap(e) {
-
     if (!e.annotation) {
         $.overlay.dismiss();
         lastAnnotation = false;
         return;
     };
 
+    toggleSelection({
+        annotation: e.annotation,
+        selected: true
+    });
+
     const place = require('/api').getPlace(e.annotation.uid);
+
+    if (lastAnnotation) {
+        toggleSelection({
+            annotation: lastAnnotation,
+            selected: false
+        });        
+    }
 
     if (lastAnnotation && lastAnnotation.uid && e.annotation.uid == lastAnnotation.uid){
         deselectTimeout = setTimeout($.overlay.dismiss, 50);
@@ -68,7 +91,15 @@ function clickMap(e) {
 }
 
 function toggleSelection(options){
-  
+    const selectedAnnotationIndex = _.findIndex(annotations, {uid: options.annotation.uid});
+    let newAnnotation = createAnnotation({
+        place: options.annotation.place,
+        selected: options.hasOwnProperty('selected') ? options.selected : !options.annotation.selectedIcon
+    });
+    $.map.removeAnnotation(options.annotation);
+    annotations.splice(selectedAnnotationIndex, 1);
+    annotations.push(newAnnotation);
+    $.map.addAnnotation(newAnnotation);
 }
 
 exports.render = function() {
