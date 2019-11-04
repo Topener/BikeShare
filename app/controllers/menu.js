@@ -23,3 +23,7 @@ function createGreeting(username) {
     });
     $.greeting.attributedString = attr;
 }
+
+function showRideHistory() {
+    Alloy.createController('rideHistory').getView().open();
+}

@@ -1,5 +1,5 @@
 <Alloy>
-	<View id="wrapper">
+	<View id="wrapper" onClick="handleClick">
 		<Label id="menuIcon" text="$.args.icon" />
 		<Label id="menuLabel" text="$.args.title" />
 	</View>

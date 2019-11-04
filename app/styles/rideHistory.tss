@@ -1,0 +1,8 @@
+"NavigationWindow": {
+    modal: true	
+}
+
+"Window": {
+    title: "Ride History",
+    backgroundColor: "#fff"
+}

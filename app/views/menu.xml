@@ -20,7 +20,7 @@
 
 			</View>
 			<Require src="/menuItem" id="wallet" />
-			<Require src="/menuItem" id="ride_history" />
+			<Require src="/menuItem" id="ride_history" onClick="showRideHistory" />
 		</View>
 	</View>
 </Alloy>
